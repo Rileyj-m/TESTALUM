@@ -66,7 +66,7 @@ function randomize() {
 
 async function randomizeV2() {
     // this is a second attempt at the randomize function
-    const response = await fetch('/json/csvjson.json');
+    const response = await fetch('../json/csvjson.json');
     // now we have the json file and can parse it
     // but the format is not as expected
     const json = await response.text();
