@@ -1,0 +1,11 @@
+{
+  "name": "csvtojson",
+  "version": "1.0.0",
+  "description": "convert csvtojson",
+  "main": "csvToJson.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Riley Marsden",
+  "license": "ISC"
+}
