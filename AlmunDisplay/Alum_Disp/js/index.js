@@ -66,12 +66,13 @@ function randomize() {
 
 async function randomizeV2() {
     // this is a second attempt at the randomize function
-    const response = await fetch('../json/csvjson.json');
+    const response = await fetch('https://raw.githubusercontent.com/Rileyj-m/TESTALUM.io/master/AlmunDisplay/Alum_Disp/json/csvjson.json');
     // now we have the json file and can parse it
     // but the format is not as expected
     const json = await response.text();
     // now lets convert the string into an array
     const jsonConverted = JSON.parse(json);
+    console.log(jsonConverted);
 
     returnarr = [];
    // pull out the json objects in the json array when they dont have keys
