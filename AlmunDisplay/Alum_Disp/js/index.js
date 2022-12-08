@@ -87,14 +87,34 @@ async function randomizeV2() {
     console.log(returnarr);
 
     // now that we have the array filtered we can randomize it and display it
-    var rand1 = Math.floor(Math.random() * returnarr.length);
-    var rand2 = Math.floor(Math.random() * returnarr.length);
-    var rand3 = Math.floor(Math.random() * returnarr.length);
+    var rand1 = 0
+    var rand2 = 0
+    var rand3 = 0
+    while(true){
+        rand1 = Math.floor(Math.random() * returnarr.length);
+        rand2 = Math.floor(Math.random() * returnarr.length);
+        rand3 = Math.floor(Math.random() * returnarr.length);
+        if (rand1 != rand2 && rand2 != rand3 && rand1 != rand3) {
+            break;
+        }
+    }
     document.getElementById("Business1OwnerName").innerHTML = returnarr[rand1]["Q8"];
     document.getElementById("Business1Name").innerHTML = returnarr[rand1]["Q1"];
     document.getElementById("DescBusiness1").innerHTML = returnarr[rand1]["Q2"];
     // the last element we need to change the link
     document.getElementById("business1web").href = returnarr[rand1]["Q3"];
+
+    document.getElementById("Business2OwnerName").innerHTML = returnarr[rand2]["Q8"];
+    document.getElementById("Business2Name").innerHTML = returnarr[rand2]["Q1"];
+    document.getElementById("DescBusiness2").innerHTML = returnarr[rand2]["Q2"];
+    // the last element we need to change the link
+    document.getElementById("business2web").href = returnarr[rand2]["Q3"];
+
+    document.getElementById("Business3OwnerName").innerHTML = returnarr[rand3]["Q8"];
+    document.getElementById("Business3Name").innerHTML = returnarr[rand3]["Q1"];
+    document.getElementById("DescBusiness3").innerHTML = returnarr[rand3]["Q2"];
+    // the last element we need to change the link
+    document.getElementById("business3web").href = returnarr[rand3]["Q3"];
 }
 
 
